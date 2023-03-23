@@ -8,6 +8,7 @@
 
     <h1>OUPS !</h1>
     <p><?= $error?></p>
+    <a href="index.php">Page d'acceuil</a>
 
 
 </section>

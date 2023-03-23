@@ -7,7 +7,7 @@
 <section class="container">
 
     <h1>Bienvenue sur mon site MVC</h1>
-    <p>Voici la liste des utilisateurs :</p>
+    <p>Voici la liste des <a href="index.php?page=error.php" style="color:red">utilisateurs</a> :</p>
 
     <?php
 
