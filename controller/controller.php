@@ -1,17 +1,20 @@
 <?php
 
-    require('model/usersModel.php');
-    require('model/opinionModel.php');
+    require_once('model/UserManager.php');
+    require_once('model/TestimonialManager.php');
 
     function home(){
-        $requete = getUsers();
+        $userManager = new UserManager();
+        $requete = $userManager->getUsers();
 
         require('view/listUsersView.php');
     }
 
 
     function opinions(){
-        $requete = getOpinions();
+        
+        $opinionManager = new TestimonialManager();
+        $requete = $opinionManager->getTestimonial();
 
-        require('view/listOpinionsView.php');
+        require('view/listTestimonialsView.php');
     }

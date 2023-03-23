@@ -8,6 +8,7 @@
 
     <h1>Avis clients</h1>
     <p>Voici la liste des avis :</p>
+    <a href="index.php"></a>
 
     <?php
 
