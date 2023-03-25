@@ -1,17 +1,8 @@
 <?php
 
     // UTILISER LA POOO
-    class UserManager {
-
-        private function connection(){
-            try {
-                $bdd = new PDO('mysql:host=localhost;dbname=MVC_SITE;charset=utf8', 'root', '');
-            }
-            catch(Exception $e) {
-                die('Erreur : '.$e->getMessage());
-            }
-            return $bdd;
-        }
+    require_once('Manager.php');
+    class UserManager extends Manager {
 
         public function getUsers(){
             

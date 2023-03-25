@@ -18,3 +18,17 @@
 
         require('view/listTestimonialsView.php');
     }
+
+    function addTestimonials($note, $messsage){
+        $testimonialManager = new TestimonialManager();
+
+        $result = $testimonialManager->postTestimonial($note, $messsage);
+
+        if($result === false){
+            throw new Exception("Impossible d'ajouter votre avis pour le moment"); 
+        }
+        else{
+            header('location: index.php?page=avis');
+            exit();
+        }
+    }

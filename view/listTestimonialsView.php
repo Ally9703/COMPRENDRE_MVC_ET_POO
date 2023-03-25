@@ -8,7 +8,21 @@
 
     <h1>Avis clients</h1>
     <p>Voici la liste des avis :</p>
-    <a href="index.php"></a>
+
+    <form method="post" action="index.php?page=avis">
+        <p>
+            <label for="note">Note / 5</label> <br>
+            <input type="number" name="note" id="note">
+        </p>
+        <p>
+            <label for="message">Message</label><br>
+            <textarea name="message" id="message"></textarea>
+        </p>
+        <p>
+            <input type="submit" value="Ajouter un avis">
+        </p>
+    </form>
+    <a href="index.php">Accueil</a>
 
     <?php
 

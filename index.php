@@ -10,7 +10,15 @@
                 home();
             }
             else if ($_GET['page'] == 'avis'){
-                opinions();
+
+                    // Vérification de l'ajouter des avis à l'aide du formulaire
+                if(isset($_POST['note']) && !empty(['message'])){
+                    addTestimonials(htmlspecialchars($_POST['note']), htmlspecialchars($_POST['message']));
+                }
+                else{
+                    opinions();
+                }
+              
             }
             
             else{
